@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majhail Barber | Book a Seat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="reserve-page">
+    <div class="page" id="top">
+        <header class="hero reserve-hero" id="home">
+            <nav class="site-nav">
+                <a class="logo" href="index.html#home">Majhail Barber</a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links" data-nav>
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#testimonial">Testimonials</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <a class="btn outline sm-hide" href="reservations.html">Book appointment</a>
+            </nav>
+
+            <div class="reserve-hero-content">
+                <div>
+                    <p class="kicker">Book your spot</p>
+                    <h1>Premium barber seats that never stay empty for long.</h1>
+                    <p class="lede">Pick a time, drop the details, and we will prep the chair, towels, and Claude-powered previews before you arrive.</p>
+                </div>
+                <div class="reserve-metrics">
+                    <div>
+                        <span>7 days</span>
+                        <p>Booking window</p>
+                    </div>
+                    <div>
+                        <span>12</span>
+                        <p>Master barbers on deck</p>
+                    </div>
+                    <div>
+                        <span>24/7</span>
+                        <p>Concierge text support</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section booking" id="book">
+                <div class="section-heading">
+                    <p class="kicker">Book a seat</p>
+                    <h2>Tell us how you want to look, and we’ll handle the rest.</h2>
+                </div>
+                <div class="booking-grid">
+                    <form class="booking-card" id="reservation-form">
+                        <div class="form-field">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="name" placeholder="Jordan Blake" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="service">Service</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option>Premium fade</option>
+                                <option>Hot towel shave</option>
+                                <option>Majhail signature package</option>
+                                <option>Beard sculpt + facial</option>
+                            </select>
+                        </div>
+                        <div class="form-split">
+                            <div class="form-field">
+                                <label for="date">Preferred date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="time">Preferred time</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="notes">Anything we should know?</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Drop inspiration links, allergies, or vibe requests."></textarea>
+                        </div>
+                        <label class="consent">
+                            <input type="checkbox" required>
+                            <span>Text me reminders and Claude Sonnet style previews.</span>
+                        </label>
+                        <button type="submit" class="btn primary">Book seat</button>
+                    </form>
+
+                    <aside class="booking-details">
+                        <div class="contact-card">
+                            <p class="kicker">Need to talk?</p>
+                            <h3>Call, text, or drop in.</h3>
+                            <ul>
+                                <li><a href="tel:+1234567890">+(123) 456-7890</a></li>
+                                <li><a href="mailto:hello@majhailbarber.com?subject=Booking inquiry">hello@majhailbarber.com</a></li>
+                                <li><a href="https://www.google.com/maps" target="_blank" rel="noreferrer">123 Fade Lane, The Junction, Earth</a></li>
+                            </ul>
+                        </div>
+                        <div class="availability">
+                            <p class="status-pill">Spots filling fast</p>
+                            <ul>
+                                <li>Mon - Fri: 9a — 9p</li>
+                                <li>Sat: 8a — 6p</li>
+                                <li>Sun: Select stylists only</li>
+                            </ul>
+                            <p class="muted">Walk-ins welcome before 11a if chairs are free.</p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="section faq">
+                <div class="section-heading">
+                    <p class="kicker">Got questions? We've got answers</p>
+                    <h2>Everything you need to know before locking in your appointment.</h2>
+                </div>
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            Do you accept walk-ins or do I need an appointment?
+                            <span>&#x203A;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Walk-ins are cool before 11a, but appointments keep the chair yours. Book online, text us, or call and we will save your slot.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            What forms of payment do you accept?
+                            <span>&#x203A;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Apple Pay, credit cards, cash, or your corporate line of credit. Tips can be cash or digital—your call.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            What is your cancellation policy?
+                            <span>&#x203A;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Cancel or reschedule up to 6 hours out with no fee. No-shows will be charged 50% because our barbers prep for you.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            Do you offer any hair products for sale?
+                            <span>&#x203A;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We stock our favorite pomades, beard oils, and styling sprays—curated by the Majhail crew for every texture.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer" id="contact">
+            <a class="logo" href="index.html#home">Majhail Barber</a>
+            <p>Majhail Barber, 123 Fade Lane, The Junction, Earth</p>
+            <div class="footer-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="reservations.html">Book a seat</a>
+            </div>
+            <div class="footer-meta">
+                <span>2025</span>
+                <a href="index.html#home">Licenses</a>
+                <span>Designed in-house</span>
+                <span>Powered by Majhail Barber</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fadecuts | Premium Barber Studio</title>
+    <title>Majhail Barber | Premium Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="page">
+    <div class="page" id="top">
         <header class="hero" id="home">
             <nav class="site-nav">
-                <a class="logo" href="#home">Fadecuts</a>
+                <a class="logo" href="#home">Majhail Barber</a>
                 <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                 </button>
                 <div class="nav-links" data-nav>
-                    <a href="#story">About</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
                     <a href="#services">Services</a>
+                    <a href="#products">Products</a>
                     <a href="#testimonial">Testimonials</a>
                     <a href="#contact">Contact</a>
                 </div>
-                <a class="btn primary sm-hide" href="#booking">Book appointment</a>
+                <a class="btn outline sm-hide" href="reservations.html">Book appointment</a>
             </nav>
 
-            <div class="hero-body">
-                <div class="hero-text">
-                    <p class="tagline">Look like a million bucks while on a budget</p>
-                    <h1>We're the barber shop that turns "I woke up like this" into a reality.</h1>
-                    <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-                    <div class="hero-cta">
-                        <a class="btn primary" href="#booking">Book an appointment</a>
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="kicker">Premium barbershop in your neighbourhood</p>
+                    <h1>The barber shop that turns heads.</h1>
+                    <p class="lede">Walk in looking good. Walk out looking unforgettable.</p>
+                    <div class="hero-ctas">
+                        <a class="btn primary" href="reservations.html">Book an appointment</a>
                         <a class="btn ghost" href="#services">Browse services</a>
                     </div>
                     <dl class="hero-stats">
@@ -51,98 +53,176 @@
                         </div>
                     </dl>
                 </div>
-                <div class="hero-visual" aria-hidden="true">
-                    <div class="hero-photo"></div>
-                    <div class="hero-card">
-                        <p>Signature Fade + Hot Towel</p>
-                        <span>$45</span>
+                <div class="hero-media" aria-hidden="true">
+                    <div class="hero-photo">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80" alt="Barber cutting hair">
                     </div>
-                    <div class="ai-pill">Claude Sonnet 4.5 enabled</div>
                 </div>
             </div>
         </header>
 
         <main>
-            <section class="section story" id="story">
-                <div class="story-grid">
-                    <div>
-                        <p class="eyebrow">Look like a million bucks while on a budget</p>
-                        <h2>We're the barber shop that turns "I woke up like this" into a reality.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-                    </div>
-                    <div class="story-card">
-                        <p class="eyebrow">About us</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-                        <a class="btn text" href="#">About us &rarr;</a>
-                    </div>
+            <section class="section intro" id="about">
+                <div class="intro-text">
+                    <p class="kicker">Obsessed with making you look good</p>
+                    <h2>Craftsmanship behind every cut.</h2>
+                    <p>Five generations of master barbers, one mission: making you look your absolute best.</p>
+                    <a class="btn text" href="#services">About us &rarr;</a>
+                </div>
+                <div class="intro-visual">
+                    <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=600&q=80" alt="Barber at work" loading="lazy">
                 </div>
             </section>
 
-            <section class="section obsession" id="obsessed">
+            <section class="section feature-block" id="features">
                 <div class="section-heading">
-                    <p class="eyebrow">Obsessed with making you look good</p>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</h2>
+                    <p class="kicker">Forget filters</p>
+                    <h2>We deliver flawless haircuts.</h2>
                 </div>
                 <div class="feature-grid">
                     <article>
-                        <p class="feature-title">Masterful craftmanship</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <h3>Masterful craftmanship</h3>
+                        <p>Precision cuts shaped by years of hands-on experience.</p>
                     </article>
                     <article>
-                        <p class="feature-title">Unmatched atmosphere</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <h3>Unmatched atmosphere</h3>
+                        <p>Relax in a space designed for comfort and style.</p>
                     </article>
                     <article>
-                        <p class="feature-title">Cutting-edge styles</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <h3>Cutting-edge styles</h3>
+                        <p>Always current, always sharp — from classics to trends.</p>
                     </article>
                 </div>
             </section>
 
+            <div class="gallery-strip">
+                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80" alt="Classic barbershop interior" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="Barber styling hair" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?w=600&q=80" alt="Barber tools and scissors" loading="lazy">
+            </div>
+
             <section class="section services" id="services">
                 <div class="section-heading">
-                    <p class="eyebrow">Our services</p>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</h2>
+                    <p class="kicker">Our services</p>
+                    <h2>Look like a million bucks while on a budget.</h2>
                 </div>
                 <div class="services-grid">
                     <article>
-                        <div class="service-tag">Styling</div>
+                        <div class="service-pill">Styling</div>
                         <h3>Short, Long, or In-Between</h3>
                         <p>We'll craft a style that makes you shine.</p>
-                        <a href="#">Learn more</a>
+                        <div class="service-footer">
+                            <span class="service-price">$45</span>
+                            <a href="reservations.html">Book now</a>
+                        </div>
                     </article>
                     <article>
-                        <div class="service-tag">Haircuts</div>
+                        <div class="service-pill">Cuts</div>
                         <h3>Freshen up your look</h3>
                         <p>Haircut tailored just for you.</p>
-                        <a href="#">Learn more</a>
+                        <div class="service-footer">
+                            <span class="service-price">$30</span>
+                            <a href="reservations.html">Book now</a>
+                        </div>
                     </article>
                     <article>
-                        <div class="service-tag">Grooming</div>
+                        <div class="service-pill">Grooming</div>
                         <h3>Hot towel shaves</h3>
                         <p>Relax with our signature beard treatments.</p>
-                        <a href="#">Learn more</a>
+                        <div class="service-footer">
+                            <span class="service-price">$35</span>
+                            <a href="reservations.html">Book now</a>
+                        </div>
                     </article>
                     <article>
-                        <div class="service-tag">Signature</div>
+                        <div class="service-pill">Signature</div>
                         <h3>Fade + facial</h3>
-                        <p>A full grooming ritual powered by Claude previews.</p>
-                        <a href="#">Learn more</a>
+                        <p>Our premium full grooming ritual.</p>
+                        <div class="service-footer">
+                            <span class="service-price">$65</span>
+                            <a href="reservations.html">Book now</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section products" id="products">
+                <div class="section-heading">
+                    <p class="kicker">In-shop & online</p>
+                    <h2>Our own grooming products.</h2>
+                    <p>Handpicked formulas we use in the chair — now available to take home.</p>
+                </div>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1626808642875-0aa545482dfb?w=400&q=80" alt="Signature Pomade" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">Hair</span>
+                            <h3>Signature Pomade</h3>
+                            <p>Medium hold, high shine. Perfect for slick-backs and defined styles.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$18</span>
+                                <a class="btn primary" href="#contact">Order in-shop</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&q=80" alt="Beard Oil" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">Beard</span>
+                            <h3>Premium Beard Oil</h3>
+                            <p>Cedarwood &amp; jojoba blend that softens, conditions and tames.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$22</span>
+                                <a class="btn primary" href="#contact">Order in-shop</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1585751119414-ef2636f8aede?w=400&q=80" alt="Hair Clay" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">Hair</span>
+                            <h3>Matte Clay</h3>
+                            <p>Strong hold, zero shine — ideal for textured, natural looks.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$20</span>
+                                <a class="btn primary" href="#contact">Order in-shop</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&q=80" alt="Beard Balm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">Beard</span>
+                            <h3>Beard Balm</h3>
+                            <p>Shea butter and beeswax formula for an all-day hold and shine.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$16</span>
+                                <a class="btn primary" href="#contact">Order in-shop</a>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </section>
 
             <section class="section testimonial" id="testimonial">
                 <div class="section-heading">
-                    <p class="eyebrow">What our fade fam has to say</p>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam.</h2>
+                    <p class="kicker">What our fade fam has to say</p>
+                    <h2>Real words from real clients.</h2>
                 </div>
-                <div class="testimonial-slider" data-slider>
+                <div class="testimonial-shell" data-slider>
                     <button class="slider-btn" data-prev aria-label="Previous review">&#8592;</button>
-                    <div class="testimonial-card" data-slide>
+                    <article class="testimonial-card" data-slide>
                         <p class="quote"></p>
-                        <div class="author"></div>
-                    </div>
+                        <p class="author"></p>
+                    </article>
                     <button class="slider-btn" data-next aria-label="Next review">&#8594;</button>
                 </div>
             </section>
@@ -150,31 +230,30 @@
             <section class="section cta" id="booking">
                 <div class="cta-card">
                     <div>
-                        <p class="eyebrow">Book your fresh cut today</p>
+                        <p class="kicker">Book your fresh cut today</p>
                         <h2>Your dream haircut is just a click away.</h2>
                         <p>Reserve your spot now and elevate your style.</p>
                     </div>
-                    <a class="btn primary" id="book-btn" href="#contact">Reserve your seat</a>
+                    <a class="btn primary" id="book-btn" href="reservations.html">Reserve your seat</a>
                 </div>
             </section>
         </main>
 
         <footer class="site-footer" id="contact">
-            <div>
-                <a class="logo" href="#home">Fadecuts</a>
-                <p>Fadecuts, 123 Fade Lane, The Junction, Earth</p>
-            </div>
+            <a class="logo" href="#home">Majhail Barber</a>
+            <p>Majhail Barber, 123 Fade Lane, The Junction, Earth</p>
             <div class="footer-links">
-                <a href="#home">Home</a>
+                <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-                <a href="#booking">Book a seat</a>
+                <a href="#products">Products</a>
+                <a href="#testimonial">Testimonials</a>
+                <a href="reservations.html">Book a seat</a>
             </div>
             <div class="footer-meta">
                 <span>2025</span>
-                <a href="#">Licenses</a>
-                <span>Designed by Nara Collective</span>
-                <span>Powered by Claude Sonnet 4.5</span>
+                <a href="#home">Licenses</a>
+                <span>Designed in-house</span>
+                <span>Powered by Majhail Barber</span>
             </div>
         </footer>
     </div>

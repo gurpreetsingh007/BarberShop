@@ -1,42 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector(".nav-links");
-    const testimonialCard = document.querySelector("[data-slide]");
+    const sliderCard = document.querySelector("[data-slide]");
     const prevBtn = document.querySelector("[data-prev]");
     const nextBtn = document.querySelector("[data-next]");
-    const bookBtn = document.getElementById("book-btn");
+    const reservationForm = document.getElementById("reservation-form");
+    const faqItems = document.querySelectorAll(".faq-item");
 
     if (navToggle && navLinks) {
         navToggle.addEventListener("click", () => {
             const expanded = navToggle.getAttribute("aria-expanded") === "true";
             navToggle.setAttribute("aria-expanded", String(!expanded));
-            navLinks.dataset.open = String(!expanded);
+            navLinks.classList.toggle("open", !expanded);
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            });
         });
     }
 
     const testimonials = [
         {
-            quote: "Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam.",
-            author: "Michael Doe — Fashion Designer"
+            quote: "It feels like walking into a lounge, not a lobby. I always leave with a cut that turns heads.",
+            author: "Isabella — Creative Director"
         },
         {
-            quote: "Lorem ipsum dolor sit ametolil col consectetur adipiscing lectus a nunc mauris scelerisque sed egestas lorem ipsum dolor sit.",
-            author: "Tala Singh — Art Director"
+            quote: "The squad remembered my last style and refined it on the fly. That's why I trust Majhail Barber.",
+            author: "Jerome — Photographer"
         },
         {
-            quote: "Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada nam fermentum.",
-            author: "Luis Ramos — Music Producer"
+            quote: "Legit the only shop where booking, vibes, and compliments happen before I hit the door.",
+            author: "Marcus — DJ"
         }
     ];
 
     let slideIndex = 0;
 
     const renderSlide = () => {
-        if (!testimonialCard) {
+        if (!sliderCard) {
             return;
         }
-        const quoteEl = testimonialCard.querySelector(".quote");
-        const authorEl = testimonialCard.querySelector(".author");
+        const quoteEl = sliderCard.querySelector(".quote");
+        const authorEl = sliderCard.querySelector(".author");
         const current = testimonials[slideIndex];
         if (quoteEl && authorEl) {
             quoteEl.textContent = current.quote;
@@ -49,14 +57,29 @@ document.addEventListener("DOMContentLoaded", () => {
         renderSlide();
     };
 
-    if (testimonialCard) {
+    if (sliderCard) {
         renderSlide();
     }
 
     prevBtn?.addEventListener("click", () => moveSlide(-1));
     nextBtn?.addEventListener("click", () => moveSlide(1));
 
-    bookBtn?.addEventListener("click", () => {
-        alert("Seat reserved! We'll send the Claude Sonnet 4.5 preview to your inbox shortly.");
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+        question?.addEventListener("click", () => {
+            const isOpen = item.classList.contains("open");
+            faqItems.forEach((faq) => faq.classList.remove("open"));
+            if (!isOpen) {
+                item.classList.add("open");
+            }
+        });
+    });
+
+    reservationForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(reservationForm);
+        const name = formData.get("name") || "friend";
+        alert(`Thanks ${name}! Your seat is locked. We'll confirm via text in a few minutes.`);
+        reservationForm.reset();
     });
 });
